@@ -26,7 +26,7 @@ export default class Contact extends Component {
         return (
             <>
 
-                <h1 className="display-3 mb-3">
+                <h1 className="display-4 mb-3">
                     <i className="bi bi-person-lines-fill display-4"> </i>Contacts</h1>
 
                 <List contacts={this.state.contacts} />
