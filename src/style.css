@@ -1,13 +1,15 @@
 body {
     background-color: #dad8d8;
+    padding: 10px;
 }
 
 .main {
     background-color: #FFF;
+    min-width: 340px;
+    max-width: 400px;
     margin: 30px auto;
-    width: 400px;
-    text-align: center;
     padding: 30px 20px;
+    text-align: center;
     border-radius: 10px;
     box-shadow: 4px 4px 12px rgba(190, 190, 190, 0.8);
 }
@@ -55,4 +57,13 @@ table {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     display: none;
+}
+
+
+@media only screen and (max-width: 420px) {
+    .main {
+        margin: 10px auto;
+        padding: 15px 10px;
+    }
+
 }

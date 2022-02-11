@@ -38,13 +38,13 @@ export default class List extends Component {
         return <div>
 
             <div className="filter">
-                <button onClick={clear} id="close" type="button" class="btn-close" aria-label="Close"></button>
+                <button onClick={clear} id="close" type="button" className="btn-close" aria-label="Close"></button>
                 <input className="form-control" onChange={onChangeFilter} value={this.state.filterText}
                     name="filter" id="filter" placeholder="Filter..." />
             </div>
 
             <div className="scrool">
-                <table className="table table-hover m-0">
+                <table className="table table-hover mb-2">
                     <tbody>
 
                         {filterContacts.map((item, index) => {

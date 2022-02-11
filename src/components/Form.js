@@ -35,11 +35,11 @@ export default class Form extends Component {
 
                 <div className="input-group mb-3">
                     <span className="input-group-text"><i className="bi bi-telephone-plus-fill"> </i></span>
-                    <input type="tel" inputmode="numeric" pattern="[0-9]{10}" className="form-control" id="phone" name="phone" placeholder="Phone..."
+                    <input type="tel" inputMode="numeric" pattern="[0-9]{10}" className="form-control" id="phone" name="phone" placeholder="Phone..."
                         onChange={onChange} value={this.state.phone} />
                 </div>
 
-                <button type="submit" className="btn btn-warning w-100"><i className="bi bi-plus-square"> </i>Add</button>
+                <button type="submit" className="btn btn-warning w-100 mb-2"><i className="bi bi-plus-square"> </i>Add</button>
 
             </form>
 
