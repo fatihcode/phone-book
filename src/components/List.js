@@ -35,30 +35,30 @@ export default class List extends Component {
             }
         )
 
-        return <div>
+        return (
+            <>
+                <div className="filter">
+                    <button onClick={clear} id="close" type="button" className="btn-close" aria-label="Close"></button>
+                    <input className="form-control" name="filter" id="filter" placeholder="Filter..."
+                        onChange={onChangeFilter} value={this.state.filterText} />
+                </div>
 
-            <div className="filter">
-                <button onClick={clear} id="close" type="button" className="btn-close" aria-label="Close"></button>
-                <input className="form-control" onChange={onChangeFilter} value={this.state.filterText}
-                    name="filter" id="filter" placeholder="Filter..." />
-            </div>
+                <div className="scrool">
+                    <table className="table table-hover mb-2">
+                        <tbody>
 
-            <div className="scrool">
-                <table className="table table-hover mb-2">
-                    <tbody>
+                            {filterContacts.map((item, index) => {
+                                return <tr key={index}>
+                                    <td><i className="bi bi-person"> </i>{item.name}</td>
+                                    <td style={{ textAlign: "end" }}><i className="bi bi-telephone"> </i>
+                                        {item.phone.substr(0, 3) + "-" + item.phone.substr(3, 3) + "-" + item.phone.substr(6)}
+                                    </td>
+                                </tr>
+                            })}
 
-                        {filterContacts.map((item, index) => {
-                            return <tr key={index}>
-                                <td><i className="bi bi-person"> </i>{item.name}</td>
-                                <td style={{ textAlign: "end" }}><i className="bi bi-telephone"> </i>
-                                {item.phone.substr(0, 3) + "-" + item.phone.substr(3, 3) + "-" + item.phone.substr(6)}
-                                </td>
-                            </tr>
-                        })}
-
-                    </tbody>
-                </table>
-            </div>
-        </div>;
+                        </tbody>
+                    </table>
+                </div>
+            </>);
     }
 }
