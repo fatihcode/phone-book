@@ -35,14 +35,14 @@ export default class Form extends Component {
                     <div className="input-group mb-3">
                         <span className="input-group-text"><i className="bi bi-person-plus-fill"> </i></span>
                         <input type="text" className="form-control" id="name" name="name" placeholder="Name..."
-                            onChange={onChange} value={this.state.name} />
+                            onChange={onChange} value={this.state.name} required/>
                     </div>
 
                     <div className="relative">
                         <div className="input-group mb-3">
                             <span className="input-group-text"><i className="bi bi-telephone-plus-fill"> </i></span>
-                            <input type="tel" inputMode="numeric" pattern="[0-9]{10}" className="form-control" id="phone" name="phone" placeholder="Phone..."
-                                onChange={onChange} value={this.state.phone} />
+                            <input type="tel" inputMode="numeric" pattern="[0-9]{10}" className="form-control" id="phone" name="phone" placeholder="10 Digit Phone..."
+                                onChange={onChange} value={this.state.phone} required/>
                         </div>
                         <span id="warn"><i className="bi bi-exclamation-circle"></i> Listede olan bir numara giremezsiniz.</span>
                     </div>
