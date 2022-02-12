@@ -10,23 +10,9 @@ export default class List extends Component {
 
     render() {
 
-        const close = document.getElementById("close")
+        const clear = () => { this.setState({ filterText: "" }) }
 
-        const clear = () => {
-            this.setState({ filterText: "" })
-            close.style.display = "none"
-        }
-
-        const onChangeFilter = (e) => {
-
-            this.setState({ filterText: e.target.value })
-
-            if (e.target.value) {
-                close.style.display = "block"
-            } else {
-                close.style.display = "none"
-            }
-        }
+        const onChangeFilter = (e) => { this.setState({ filterText: e.target.value }) }
 
         const filterContacts = this.props.contacts.filter(
             item => {
@@ -34,6 +20,15 @@ export default class List extends Component {
                     || item.phone.toLowerCase().indexOf(this.state.filterText.toLowerCase()) !== -1
             }
         )
+
+
+        setTimeout(() => {
+            const close = document.getElementById("close")
+            this.state.filterText ? (close.style.display = "block") : (close.style.display = "none");
+        }, 10);
+
+
+        const userDel = (e) => { this.props.change(this.props.contacts.filter(item => item.phone !== e.target.id)) }
 
         return (
             <>
@@ -51,7 +46,8 @@ export default class List extends Component {
                                 return <tr key={index}>
                                     <td><i className="bi bi-person"> </i>{item.name}</td>
                                     <td style={{ textAlign: "end" }}><i className="bi bi-telephone"> </i>
-                                        {item.phone.substr(0, 3) + "-" + item.phone.substr(3, 3) + "-" + item.phone.substr(6)}
+                                        {item.phone.substr(0, 3) + "-" + item.phone.substr(3, 3) + "-" + item.phone.substr(6)} { }
+                                        <span className="bi bi-trash" id={item.phone} onClick={userDel}></span>
                                     </td>
                                 </tr>
                             })}

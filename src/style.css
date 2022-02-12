@@ -59,6 +59,24 @@ input::-webkit-inner-spin-button {
     display: none;
 }
 
+.relative {
+    position: relative;
+}
+
+#warn {
+    display: none;
+    position: absolute;
+    top: -18px;
+    right: 4px;
+    font-size: 13px;
+    color: #CA4242;
+}
+
+.bi-trash:hover{
+    color: #cf2929;
+}
+
+
 
 @media only screen and (max-width: 420px) {
     .main {
