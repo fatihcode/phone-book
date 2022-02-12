@@ -32,7 +32,7 @@ export default class List extends Component {
 
         return (
             <>
-                <div className="filter">
+                <div className="filter mb-2">
                     <button onClick={clear} id="close" type="button" className="btn-close" aria-label="Close"></button>
                     <input className="form-control" name="filter" id="filter" placeholder="Filter..."
                         onChange={onChangeFilter} value={this.state.filterText} />
