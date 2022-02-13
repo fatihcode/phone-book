@@ -47,7 +47,7 @@ export default class List extends Component {
                                     <td><i className="bi bi-person"> </i>{item.name}</td>
                                     <td style={{ textAlign: "end" }}><i className="bi bi-telephone"> </i>
                                         {item.phone.substr(0, 3) + "-" + item.phone.substr(3, 3) + "-" + item.phone.substr(6)} { }
-                                        <span className="bi bi-trash" id={item.phone} onClick={userDel}></span>
+                                        <span className="del bi bi-x-circle" id={item.phone} onClick={userDel}></span>
                                     </td>
                                 </tr>
                             })}

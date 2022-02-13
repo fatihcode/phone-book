@@ -66,8 +66,12 @@ table {
     color: #CA4242;
 }
 
-.bi-trash:hover{
-    color: #cf2929;
+.del {
+    color: #bbbbbb;
+}
+
+.del:hover {
+    color: #ff0000;
 }
 
 input::-webkit-outer-spin-button,
