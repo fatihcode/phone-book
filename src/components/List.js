@@ -21,7 +21,6 @@ export default class List extends Component {
             }
         )
 
-
         setTimeout(() => {
             const close = document.getElementById("close")
             this.state.filterText ? (close.style.display = "block") : (close.style.display = "none");
