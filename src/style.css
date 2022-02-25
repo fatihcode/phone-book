@@ -17,13 +17,15 @@ body {
 .filter {
     position: relative;
     padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
 
 #close {
     display: none;
     position: absolute;
-    right: 17px;
-    top: 7px;
+    margin-right: 7px;
 }
 
 .scrool {
