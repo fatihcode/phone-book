@@ -1,6 +1,6 @@
 # React Phone Book Application
 
-live: [https://fatihqaz.github.io/phone-book/](https://fatihqaz.github.io/phone-book/)
+live: [https://fatihcode.github.io/phone-book/](https://fatihcode.github.io/phone-book/)
 
 * Adding Name and phone number to the list
 * Filtering by name and phone number
